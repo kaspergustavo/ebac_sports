@@ -20,11 +20,7 @@ const carrinhoSlice = createSlice({
       if (state.itens.find((p) => p.id === produto.id)) {
         alert('Item já adicionado')
       } else {
-        //apesar do professor Gian, alertar sobre não ser correto por conta da imutabilidade eu sei que o immer, faz isso e por isso está funcionando a aplicação.
-        //por outro lado, na sequencia posso também usar o item que deixo comentado em substituição do PUSH < state.itens = [...state.itens, produto] >
-        // mas optei por deixar o push mesmo.
         state.itens.push(produto)
-        // state.itens = [...state.itens, produto]
       }
     }
   }
